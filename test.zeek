@@ -23,8 +23,8 @@ $epoch_result(ts:time, key:SumStats::Key, result:SumStats::Result) =
 {
 local rst2=result["response.sum"];
 if(num1>2){
-if(num1/rst2$num>0.2){
-if(uuc/num1>0.5){
+if(rst2$num*0.2<num1){
+if(num1*0.5<uuc){
 print fmt("%s is a scanner with %d scan attemps on %d urls",key$host,num1,uuc);
 }
 }
